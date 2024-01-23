@@ -1,9 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponse
 from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 
 from .models import *
+def test(request):
+    return HttpResponse("<h1>Hellow this is my first deployment done!</h1>")
 
 class HomeView(ListView):
     context_object_name = 'project_list'
@@ -30,3 +32,4 @@ class ProjectDeleteView(DeleteView):
     template_name = "azure_content/delete.html"
     fields = ['name']
     success_url ="/"
+
