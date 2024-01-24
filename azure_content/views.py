@@ -7,6 +7,9 @@ from .models import *
 def test(request):
     return HttpResponse("<h1>Hellow this is my first deployment done!</h1>")
 
+def index(request):
+    return HttpResponse("<h1>This is index page!</h1>")
+
 class HomeView(ListView):
     context_object_name = 'project_list'
     model = Project

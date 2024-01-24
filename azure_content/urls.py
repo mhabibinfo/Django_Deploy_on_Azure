@@ -8,4 +8,5 @@ urlpatterns = [
     path('edit/<int:pk>', ProjectEditView.as_view(),name="edit"),
     path('delete/<int:pk>', ProjectDeleteView.as_view(),name="delete"),
     path('test/', test,name="test"),
+    path('index/', test,name="index"),
 ]
