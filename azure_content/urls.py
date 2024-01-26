@@ -9,4 +9,6 @@ urlpatterns = [
     path('delete/<int:pk>', ProjectDeleteView.as_view(),name="delete"),
     path('test/', test,name="test"),
     path('index/', test,name="index"),
+    path('testing/', testing,name="testing"),
+    
 ]

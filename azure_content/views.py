@@ -7,6 +7,9 @@ from .models import *
 def test(request):
     return HttpResponse("<h1>Hellow this is my first deployment done!</h1>")
 
+def testing(request):
+    return HttpResponse("<h1>I have make some changes in this great project</h1>")
+
 def index(request):
     return HttpResponse("<h1>This is index page!</h1>")
 
