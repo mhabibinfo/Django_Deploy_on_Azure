@@ -2,9 +2,9 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 #settings_module = 'azure_project.deployment' if 'WEBSITE_HOSTNAME' in os.environ else 'azure_project.settings'
-if 'WEBSITE_HOSTNAME=allurepro-staging.azurewebsites.net' in os.environ:
+if os.environ['WEBSITE_HOSTNAME']=='allurepro-staging.azurewebsites.net':
     settings_module = 'azure_project.staging'
-elif 'WEBSITE_HOSTNAME=allurepro.azurewebsites.net' in os.environ:
+elif os.environ['WEBSITE_HOSTNAME']=='allurepro.azurewebsites.net':
     settings_module = 'azure_project.deployment'
 else:
     settings_module = 'azure_project.settings'
