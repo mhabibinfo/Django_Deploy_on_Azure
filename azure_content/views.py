@@ -11,7 +11,7 @@ def testing(request):
     return HttpResponse("<h1>I have make some changes in this great project</h1>")
 
 def index(request):
-    return HttpResponse("<h1>This is index page!</h1>")
+    return HttpResponse("<h1>This is index page! with update changes</h1>")
 
 class HomeView(ListView):
     context_object_name = 'project_list'
